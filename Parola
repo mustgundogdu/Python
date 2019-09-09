@@ -1,0 +1,6 @@
+parola = ''
+while parola != 'musti':
+    print('What is the password?')
+    parola = input()
+if (parola=='musti'):
+    print("Ok man(sifre degil parola bunu unutma)!! ")
