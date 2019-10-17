@@ -1,0 +1,8 @@
+
+import base64
+vac = "deneme"
+enc = base64.b64encode(vac)
+print("encode:",enc)
+dec = base64.b64decode(enc)
+print("decode:",dec)
+
