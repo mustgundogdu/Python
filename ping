@@ -1,0 +1,8 @@
+import os
+hostname = "www.google.com"
+response = os.system("ping -c " + hostname )
+
+if response == 0 :
+    print(hostname,'is up!')
+else :
+    print(hostname,'is down!')
