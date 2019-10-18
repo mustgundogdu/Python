@@ -1,5 +1,5 @@
 import requests
-dosya=open("username_password.txt","r")
+dosya=open("username_password.txt","r") #username_password.txt dosyasındaki username ve parolaları denemek için.
 icerik=dosya.read()
 dosya.close()
 web = "http://192.168.154.139/bWAPP/login.php" #bWAPP makinesi giriş kısmı için.
