@@ -1,0 +1,10 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+import socket
+
+s = socket.socket(socket.AF_INET,socket.SOCK_STREAM) #TCP protokol ve IPv4
+host = socket.gethostname() #localhost adres
+port = 533
+s.connect((host,port)) #Server baglanti icin IPv4 ve port numarasi
+s.send("Merhaba Reis") #server veri gönder
+print (s.recv(1024)) #serverdan alinan veri ekrana bas
