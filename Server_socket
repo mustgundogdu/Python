@@ -1,0 +1,20 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+import socket
+import time
+
+host = socket.gethostname() #localhost adresi
+port = 533
+
+s = socket.socket(socket.AF_INET,socket.SOCK_STREAM) #TCP protocol ve IPv4 icin
+s.bind((host,port)) #IPv4 adresi ve port bagla
+
+s.listen(5)
+print ("Baglanti bekleniyor...")
+conn,addr = s.accept() #baglanti kabul ve yeni soket nesnesi
+print ("Baglanti yeri = ",addr)
+
+data = conn.recv(1024) #alinan data
+print (data) #clientdan alinan veri ekrana bas
+conn.send("Merhaba client") #client veri gönder
+conn.close()
